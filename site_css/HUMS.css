@@ -3867,9 +3867,28 @@ header.nav-deux .c-nav__icon.v--close svg {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 767px) {
+  .c-humslogo-2 {
+    transform: translate(-280px, -10px);
+  }
+  .red-div {
+    height: 55px;
+  }
+}
+
+
+
 .bottom-crossed {
   transform: translateY(-50px);
 }
+
+@media only screen and (max-width: 767px) {
+  .bottom-crossed {
+    transform: translate(125px, -100px);
+    margin-bottom: -150px;
+  }
+}
+
 
 .c-humslogo a {
   line-height: inherit;
@@ -5805,7 +5824,8 @@ header.nav-deux .c-nav__icon.v--close svg {
   }
   .c-nav--expanded-footer .c-nav--expanded-footer__submenu .c-nav__legal-text {
     text-align: center;
-    padding: 0 1rem;
+    margin-bottom: -50px;
+    
   }
 }
 body.is-scrolled .c-nav__mobile.expanded.v--primary .c-nav__toolbar {
@@ -24203,13 +24223,15 @@ a.t-social-linkedin:hover {
   #CONTACT
 \*-----------------------------------*/
 
+
 .contact-form {
   width: 100%;
-  max-width: 600px; /* Adjust to your desired width */
+  max-width: 500px; /* Adjust to your desired width */
   border-radius: 14px;
   transform: translateY(-50px);
   margin-bottom: -50px;
 }
+
 .form-title {
   margin-bottom: 20px;
   text-align: center;
@@ -24220,6 +24242,7 @@ a.t-social-linkedin:hover {
   gap: 25px;
   margin-bottom: 25px;
 }
+
 .form-input::placeholder {
   text-align: left;
   justify-content: left;
@@ -24237,6 +24260,9 @@ textarea.form-input {
 }
 textarea.form-input::-webkit-resizer {
   display: none;
+}
+.form-input:focus:valid {
+  border-color: #003da5;
 }
 .form-input:focus:invalid {
   border-color: #c8102e;
@@ -24320,3 +24346,43 @@ footer.o-content-container {
   text-align: left;
 }
 
+@media only screen and (max-width: 767px) {
+  .contact-form .form-input {
+    width: 300px;
+    max-width: none;
+  }
+}
+
+
+.middle-image-left {
+  width: 600px;
+  height: 350px;
+  border-top-right-radius: 500px;
+  border-bottom-right-radius: 500px;
+}
+
+.middle-image-right {
+  width: 600px;
+  height: 350px;
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+}
+
+@media only screen and (max-width: 767px) {
+  .middle-image-left {
+    width: 300px;
+    height: 175px;
+
+  }
+  .middle-image-right {
+    width: 300px;
+    height: 175px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .c-humslogo--color {
+    height: 75px;
+    width: 75px;
+  }
+}
