@@ -465,6 +465,11 @@ body.notifications::before {
     text-align: center;
   }
 }
+@media only screen and (max-width: 767px) {
+  .section-copy-left {
+    text-align: right;
+  }
+}
 @media screen and (min-width: 48rem) and (max-width: 1023px) {
   .u-full-width .section-copy {
     max-width: 32rem;
