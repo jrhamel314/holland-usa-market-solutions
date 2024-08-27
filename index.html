@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US" class="">
-
+<!-- test comment -->
   <head>
     <link rel="preconnect" href="https://d34u8crftukxnk.cloudfront.net">
     <script type="text/human"></script>
@@ -67,6 +67,10 @@
       thisScript.async = true;
       thisScript.src = '//www.googletagmanager.com/gtm.js?id=GTM-KH2LPK';
       firstScript.parentNode.insertBefore(thisScript, firstScript);
+    </script>
+    <script>
+      if (!window.cj) window.cj = {};
+      cj.sitePage = { "enterpriseId": 1568900 }
     </script>
     <title>Holland-USA Market Solutions</title>
     <meta name="description"
@@ -258,7 +262,8 @@
           </div>
         </div>
       </nav>
-      <nav id="main_nav" class="c-nav__mobile v--primary expanded" role="navigation" aria-label="Primary Navigation">
+      <nav id="main_nav" class="c-nav__mobile v--primary expanded" role="navigation"
+        aria-label="Primary Navigation">
         <div class="c-nav__toolbar v--top"><button class="c-nav__back hidden" data-clog-click=""
             data-clog-ui-element="btn_back" data-clog-ui-component="inc_mobile_nav_deux">Back</button><a
             class="c-nav__logo" href="#" data-clog-click="" data-clog-ui-element="link_home"
@@ -361,12 +366,13 @@
 
       <section class="o-section v--borderless u-background--horchata" id="research-2">
         <div class="o-content-container o-two-columns u-full-width u-align--center">
-          <div class="">
+          <div class="u-hide-on-mobile">
 
-            <img src="./images/magnify.jpg" alt="research" title="research" class="middle-image-left">
+            <img src="./images/magnify.jpg" alt="research" title="research"
+              style="width: 100%; height: 350px; border-top-right-radius: 500px; border-bottom-right-radius: 500px;">
           </div>
 
-          <div class="section-copy section-copy-left">
+          <div class="section-copy">
             <h2 class="display-as-h1 v--intl u-margin-top--flush">Research</h2>
             <p class="o-section--feature__copy u-margin-bottom--medium">We provide detailed reports and actionable
               insights to help you navigate the complexities of American markets.</p>
@@ -380,12 +386,13 @@
 
       <section class="o-section v--borderless u-background--horchata" id="market-entry-2">
         <div class="o-content-container o-two-columns u-full-width u-align--center v--inverse">
-          <div class=" u-justify-self--end">
+          <div class="u-hide-on-mobile u-justify-self--end">
 
-            <img src="./images/hero-1920.jpg" alt="market entry" title="market entry" class="middle-image-right">
+            <img src="./images/hero-1920.jpg" alt="market entry" title="market entry"
+              style="width: 100%; height: 350px; border-top-left-radius: 500px; border-bottom-left-radius: 500px;">
 
           </div>
-          <div class="section-copy section-copy-right">
+          <div class="section-copy">
             <h2 class="display-as-h1 v--intl u-margin-top--flush">Market Entry</h2>
             <p class="o-section--feature__copy u-margin-bottom--medium">We offer personalized advice on market entry
               strategies, operational efficiency, and risk management, tailored to your needs.</p>
@@ -400,13 +407,13 @@
 
       <section class="o-section v--borderless u-background--horchata" id="company-formation-2">
         <div class="o-content-container o-two-columns u-full-width u-align--center">
-          <div class="">
+          <div class="u-hide-on-mobile">
 
             <img src="./images/registration.jpg" alt="company formation" title="company formation"
-              class="middle-image-left">
+              style="width: 100%; height: 350px; border-top-right-radius: 500px; border-bottom-right-radius: 500px;">
 
           </div>
-          <div class="section-copy section-copy-left">
+          <div class="section-copy">
             <h2 class="display-as-h1 v--intl u-margin-top--flush">Company Formation</h2>
             <p class="o-section--feature__copy u-margin-bottom--medium">We deliver expert guidance and comprehensive
               company formation solutions including financial advice, corporate structuring, IPOs, tax implications,
@@ -422,12 +429,13 @@
 
       <section class="o-section v--borderless u-background--horchata" id="development-2">
         <div class="o-content-container o-two-columns u-full-width u-align--center v--inverse">
-          <div class=" u-justify-self--end">
+          <div class="u-hide-on-mobile u-justify-self--end">
 
-            <img src="./images/climbing.jpg" alt="development" title="development" class="middle-image-right">
+            <img src="./images/climbing.jpg" alt="development" title="development"
+              style="width: 100%; height: 350px; border-top-left-radius: 500px; border-bottom-left-radius: 500px;">
 
           </div>
-          <div class="section-copy section-copy-right">
+          <div class="section-copy">
             <h2 class="display-as-h1 v--intl u-margin-top--flush">Development</h2>
             <p class="o-section--feature__copy u-margin-bottom--medium">We assist in identifying and pursuing new growth
               opportunities,
@@ -664,9 +672,6 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const links = document.querySelectorAll('a[href="#company-formation-2"], a[href="#development-2"], a[href="#research-2"], a[href="#market-entry-2"]');
-        const dropdownMenu = document.querySelector('#main_nav');
-        const htmlElement = document.documentElement;
-        const bodyElement = document.body;
 
         links.forEach(function (link) {
           link.addEventListener("click", function (event) {
@@ -674,34 +679,12 @@
             const targetID = this.getAttribute("href");
             const targetElement = document.querySelector(targetID);
 
-            let offset;
-            if (window.innerWidth < 676) {
-              offset = 20;
-            } else {
-              offset = 50;
-            }
-
-            const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+            const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - 50;
 
             window.scrollTo({
               top: offsetTop,
               behavior: "smooth"
             });
-
-            if (dropdownMenu) {
-              dropdownMenu.classList.remove('is-open');
-              dropdownMenu.classList.add('is-hidden');
-            }
-
-            if (dropdownMenu) {
-              if (dropdownMenu.classList.contains('is-open')) {
-                htmlElement.classList.add('js-nav-open');
-                bodyElement.classList.add('js-nav-open');
-              } else {
-                htmlElement.classList.remove('js-nav-open');
-                bodyElement.classList.remove('js-nav-open');
-              }
-            }
           });
         });
       });
