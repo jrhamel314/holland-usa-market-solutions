@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "hollandusamarketsolutions.com",
+  "Id": "690a6e42-afd6-4f6e-96a3-06dd986404fc"
+}
